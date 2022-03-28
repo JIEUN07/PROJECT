@@ -1,7 +1,56 @@
-# PROJECT - 01
-## Anomaly_Detection
+# PROJECT - 01 Anomaly_Detection
+## 주제) 시계열 데이터를 이용한 제조공정에서의 이상탐지
+### 1. 프로젝트 개요
+- **데이터 정보**
+    - 인공지능 중소벤처 제조 플랫폼
+    - 제공기관 KAIST
 
+    [품질 이상탐지,진단(전해탈지) AI 데이터셋](https://www.kamp-ai.kr/front/dataset/AiDataDetail.jsp?AI_SEARCH=&page=2&DATASET_SEQ=20&EQUIP_SEL=&FILE_TYPE_SEL=&GUBUN_SEL=&WDATE_SEL=)
+    
+- **프로젝트 목적**
+    - 생산제품의 이상을 조기에 탐지할 수 있는 모델을 만들어 이상 제품을 탐지하는 것
+- **프로젝트 기대효과**
+    - 학습된 모델을 통해 진행되는 품질검사로 품질검사에 투입되는 인건비와 시간 절감 기대
+    - 공정 데이터를 학습모델에 적용시 품질예측 가능
+    - 전처리 공정인 전해탈지 공정의 품질예측 후 진행되는 공정 및 완제품 품질 향상에 기여
+    - 이 외의 공정에도 수정 모델을 적용해 품질 예측 활용에 적용 가능
+### 2. 전처리
+    - 그룹화, 정규화, Train-valid-test 분할
+    - 가공되어 올라온 데이터이므로 결측치 제거 불필요
+    - 일반적으로는 이상치 처리가 필요하지만, 이상탐지 모델이기 때문에 이상치를 활용
+    - 나누어져 있는 공정단위 별 그룹화
+    
+- **데이터 설명**
+    - 주요변수인 Time, pH, Temp, Current가 공정단위에 따라 기록된 시계열 데이터
+    - 이상 여부인 Error는 각 공정단위 별 표기
+    - pH, Temp, Current는 기준치가 존재하며 해당 값에서 멀어질수록 이상 발생확률 증가
+![image](https://user-images.githubusercontent.com/94789091/160402350-3302a40e-0f80-4bd1-821b-5f7bef6667df.png)
 
+- **변수 간 상관관계 파악**
+     - 0.2미만의 낮은 상관계수로 변수 간 상관관계가 거의 없음
+     - 이는 상관계수만으로 상관관계 파악이 어려워 모델 개발 필요
+     
+    ![image](https://user-images.githubusercontent.com/94789091/160402703-921abd21-503c-4dba-acf6-15a2f0be49ab.png)
+
+- **파생 변수 생성**
+
+![image](https://user-images.githubusercontent.com/94789091/160403047-50dbd0ed-8bc0-4cec-92c1-215006814c04.png)
+
+### 3. 모델 설명 - Logistic Regression
+    - pH 0.6이상, Temp 0.8이상, Current 0.3이하인 경우 가중치 부여
+    - 변수의 중요도 별로 가중치를 다르게 부여
+    
+### 3. 모델 결과
+
+![image](https://user-images.githubusercontent.com/94789091/160403991-34945ba4-7a69-4710-a1b0-f3527ff85762.png)
+
+- **보완점**
+    - 해당 공정에 관한 전문적인 조언을 구할 전문가의 부재, 전문 지식의 부족으로 분석에 한계를 보임
+    - 데이터의 양이 많지 않아 모델이 충분히 학습되는데 어려웠다고 파악, 충분한 양의 데이터 확보 필요
+    - 정상-비정상 분포가 불균형해 모델 학습에 과적합이 발생하여 데이터 불균형 해결방안 필요
+    - 앙상블 기법 사용하여 성능 개선 도모
+
+==========================================================================
 
 # PROJECT - 02 Timeseries_Prediction
 ## 주제) Run-way Functions: Predict Reconfigurations at US Airports (Open Arena)
@@ -104,8 +153,8 @@
 
 ## 4. 결과
 
-![image](https://user-images.githubusercontent.com/94789091/160344579-c923cb27-864e-4bbe-9766-9cbfa2a3bed4.png)
-<aside>
+![image](https://user-images.githubusercontent.com/94789091/160385508-b94f9e29-d8af-4bce-a904-7b48b0f7a6f4.png)
+
 💡 Current Rank : 1등
 
 </aside>
