@@ -1,4 +1,4 @@
-# PROJECT - 01 Anomaly_Detection
+# PROJECT - 01 Timeseries_Anomaly_Detection
 ## 주제) 시계열 데이터를 이용한 제조공정에서의 이상탐지
 ### 1. 프로젝트 개요
 - **데이터 정보**
@@ -54,11 +54,6 @@
 
 # PROJECT - 02 Timeseries_Prediction
 ## 주제) Run-way Functions: Predict Reconfigurations at US Airports (Open Arena)
-### 목차
-1. 프로젝트 개요
-2. 전처리
-3. 모델설명
-4. 결과
 
 ### 1. 프로젝트 개요
 
@@ -69,7 +64,7 @@
     [Run-way Functions: Predict Reconfigurations at US Airports (Open Arena)](https://www.drivendata.org/competitions/89/competition-nasa-airport-configuration/)
     
 - **프로젝트 목적**
-    - US 10개 항공 로 미래에 어떤 활주로가 활성화 될지 예측한다
+    - US 10개 공항의 미래에 어떤 활주로가 활성화 될지 예측한다
 - **프로젝트 설명**
     - 공항의 활주로는 모두 항상 사용되지 않는다. 기상, 시간, 항공량에 따라 활성화 되는 활주로가 다르고 이를 예측하는 것은 효율적인 공항 교통 통제에 있어서 매우 중요하다. 따라서 과거의 데이터들을 이용 해 미래에 어떤 활주로가 활성화 될지 예측하는 모델을 개발한다.
 - **데이터**
