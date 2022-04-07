@@ -64,7 +64,7 @@
     [Run-way Functions: Predict Reconfigurations at US Airports (Open Arena)](https://www.drivendata.org/competitions/89/competition-nasa-airport-configuration/)
     
 - **프로젝트 목적**
-    - US 10개 공항의 미래에 어떤 활주로가 활성화 될지 예측
+    - 미국 10개 공항의 미래에 어떤 활주로가 활성화 될지 예측
 - **프로젝트 설명**
     - 공항의 활주로는 항상 모두 사용되는 것이 아님
     - 기상, 시간, 항공량에 따라 활성화 되는 활주로가 다르고 이를 예측하는 것은 효율적인 공항 교통 통제에 있어서 매우 중요 
@@ -75,12 +75,20 @@
 
 - 제공 된 데이터 중 사용 된 것은 활주로 활성화 정보, 기상 데이터가 주로 사용 됨
 
-### 2.1 Configuration
+### 2.1 Configuration 설명
+**config의 세부 설명 (활주로 구성의 설명)** 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fb16d530-6930-4e4b-951a-09df49fc9e22/Untitled.png)
+![image](https://user-images.githubusercontent.com/94789091/162134123-9989f492-e7fa-4e05-a97c-6f035edfa37f.png)
 
 - Runway는 크게 Departure 와 Arrival 두종류로 나뉘어 사용 되며 시간, 기상, 항공량에 따라 조합이 구성 됨
 - 위 Table의 airport_config 컬럼이 해당 시간대에 활성화 된 runway의 조합을 뜻하며 D_로 시작하는 것들은 이륙에 사용 된 활주로, A로 시작하는 것들은 착륙에 사용 된 활주로를 뜻 함
+
+
+**Target 변수 주의점** 
+![image](https://user-images.githubusercontent.com/94789091/162134573-9816dc2c-9915-4052-8ebf-fde6ab1fc174.png)
+
+- 예측해야하는 변수는 활주로가 아닌 시간대별 '활주로 구성'을 예측하는 다중분류문제
+- 공항 별 활주로 구성과 구성의 수가 달라 각각의 모델을 만들어야 할 것으로 보임
 
 **시간 간격 통일** 
 
