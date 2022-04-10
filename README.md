@@ -55,7 +55,7 @@
 # PROJECT - 02 Timeseries_Prediction
 ## 주제) Run-way Functions: Predict Reconfigurations at US Airports (Open Arena)
 
-### 1. 프로젝트 개요
+## 1. 프로젝트 개요
 
 - **대회 정보**
     - 미국의 데이터 Competition Plotform ‘DRIVENDATA’에서 진행 된 Competition
@@ -71,12 +71,9 @@
     - 따라서 과거의 데이터들을 이용해 미래에 어떤 활주로가 활성화 될지 예측하는 모델 개발
 - **데이터**
     - 미국 10개 공항 별 이착륙 정보, 활주로 활성화 정보, 기상 데이터
-## 2. 전처리
 
-- 제공 된 데이터 중 사용 된 것은 활주로 활성화 정보, 기상 데이터가 주로 사용 됨
-
-### 2.1 Configuration 설명
-**config의 세부 설명 (활주로 구성의 설명)** 
+## 2. 데이터 설명
+### 2.1 config의 세부 설명 (활주로 구성의 설명)
 
 ![image](https://user-images.githubusercontent.com/94789091/162134123-9989f492-e7fa-4e05-a97c-6f035edfa37f.png)
 
@@ -84,21 +81,13 @@
 - 위 Table의 airport_config 컬럼이 해당 시간대에 활성화 된 runway의 조합을 뜻하며 D_로 시작하는 것들은 이륙에 사용 된 활주로, A로 시작하는 것들은 착륙에 사용 된 활주로를 뜻 함
 
 
-**Target 변수 주의점** 
+**Target 변수 주의점**
+
 ![image](https://user-images.githubusercontent.com/94789091/162134573-9816dc2c-9915-4052-8ebf-fde6ab1fc174.png)
 
 - 예측해야하는 변수는 활주로가 아닌 시간대별 '활주로 구성'을 예측하는 다중분류문제
 - 공항 별 활주로 구성과 구성의 수가 달라 각각의 모델을 만들어야 할 것으로 보임
 
-**시간 간격 통일** 
-
-- 해당 데이터들은 컴퓨터에 자동으로 기록 된 Log 성격의 데이터이기 때문에 기록 시간의 단위가 모두 다름
-- 일정한 간격의 시간 단위로 자르기 위해서 30분 간격으로 통일 함
-
-**One- hot Encoding** 
-
-- 이 모델은 일종의 여러개의 Class(Configuration 경우의 수)를 분류하는 Multi class Classification
-- 따라서 활성화 횟수가 10회 이하인 것들은 other로 묶고 나머지를 각각 class로 one hot encodling 함
 
 ### 2.2 기상 데이터
 
@@ -116,7 +105,22 @@
 - 이 데이터 역시 Configuration과 마찬가지로 Log 성격의 데이터 이기 때문에 시간 간격이 모두 다름
 - 이를 일정한 간격을 맞춰 모델에 input 될 때 특정 범위만 사용될 수 있도록 함
 
-## 3. 모델 설명
+## 3. 전처리
+
+- 제공 된 데이터 중 사용 된 것은 활주로 활성화 정보, 기상 데이터가 주로 사용 됨
+
+**시간 간격 통일** 
+
+- 해당 데이터들은 컴퓨터에 자동으로 기록 된 Log 성격의 데이터이기 때문에 기록 시간의 단위가 모두 다름
+- 일정한 간격의 시간 단위로 자르기 위해서 30분 간격으로 통일 함
+
+**One- hot Encoding** 
+
+- 이 모델은 일종의 여러개의 Class(Configuration 경우의 수)를 분류하는 Multi class Classification
+- 따라서 활성화 횟수가 10회 이하인 것들은 other로 묶고 나머지를 각각 class로 one hot encodling 함
+
+
+## 4. 모델 설명
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b7eddc14-5c3e-4e67-a44c-e5b98a5b555b/Untitled.png)
 
@@ -125,7 +129,7 @@
 - 기본적인 모델 컨셉은 기준 시간으로 부터 과거 12시간의 데이터를 참조 하여 미래 6시간의 데이터를 예측함
 - 과거 12시간 데이터 - 미래 6시간 데이터 그리고 lamp데이터를 모두 연결해주는 key 로 timestamp를 사용 함
 
-### 3.1 **모델 구성**
+### 4.1 **모델 구성**
 
 - 모델은 크게 두개로 나뉨
     - Configuration 데이터를 처리하는 LSTM 네트워크
@@ -143,7 +147,7 @@
 - 10개 공항을 한번에 학습 하는 것은 수 많은 경우의 수를 유발하기 때문에 정확도가 낮다고 판단 10개 공항 각각 모델을 학습 시키는 것으로 진행 함
 - 모델 네트워크는 동일하게 가져가되 데이터만 바꾸어 10개 모델을 만듬
 
-### 3.2. Optimizer
+### 4.2. Optimizer
 
 - Optimizer로 Tensorflow Addons API의 **Rectifier Adam**를 사용 함
     - Total steps : 10000
@@ -156,7 +160,7 @@
     - Decay rate : 0.96
     - Stair case : True
 
-## 4. 결과
+## 5. 결과
 ![image](https://user-images.githubusercontent.com/94789091/160774083-ed1285a2-1e19-4576-bd14-375b595acf91.png)
 
 💡 Current Rank : 1등
