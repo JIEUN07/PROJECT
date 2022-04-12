@@ -91,14 +91,15 @@
 
 ### 2.2 기상 데이터
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/999c55b5-55a6-45d2-bdb9-f4ab8d3049dc/Untitled.png)
+![구조](https://user-images.githubusercontent.com/94789091/162891419-87a47fc8-e075-481e-81e5-2b7f842adb36.png)
 
-- 기상 데이터에는 기록 시간, 예측 시간 그리고 온도, 풍향,풍속,등의 데이터가 존재 함
+
+- 기상 데이터에는 기록 시간, 예측 시간 그리고 온도, 풍향,풍속,등의 데이터 존재
 
 **Feature** 
 
-- 변수로 풍향과 풍속만 사용 됨
-- 비행기가 이착륙시 충분한 양력과 안정성을 위해 맞바람이 불어야 함. 즉 풍향은 다른 어떠한 변수 보다도 활주로 사용에 큰 영향을 끼치기 때문에 변수로 사용 됨
+- 변수로 풍향과 풍속만 사용
+- 비행기가 이착륙시 충분한 양력과 안정성을 위해 맞바람 필요하기 때문에 활주로 사용에 큰 영향을 끼치는 것으로 판단
 
 **Time** 
 
@@ -107,24 +108,24 @@
 
 ## 3. 전처리
 
-- 제공 된 데이터 중 사용 된 것은 활주로 활성화 정보, 기상 데이터가 주로 사용 됨
+- 제공 된 데이터 중 사용 된 것은 활주로 활성화 정보, 기상 데이터가 주로 사용
 
 **시간 간격 통일** 
 
 - 해당 데이터들은 컴퓨터에 자동으로 기록 된 Log 성격의 데이터이기 때문에 기록 시간의 단위가 모두 다름
-- 일정한 간격의 시간 단위로 자르기 위해서 30분 간격으로 통일 함
+- 일정한 간격의 시간 단위로 자르기 위해서 30분 간격으로 통일
 
 **One- hot Encoding** 
 
 - 이 모델은 일종의 여러개의 Class(Configuration 경우의 수)를 분류하는 Multi class Classification
-- 따라서 활성화 횟수가 10회 이하인 것들은 other로 묶고 나머지를 각각 class로 one hot encodling 함
+- 따라서 활성화 횟수가 10회 이하인 것들은 other로 묶고 나머지를 각각 class로 one hot encodling 처리
 
 
 ## 4. 모델 설명
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b7eddc14-5c3e-4e67-a44c-e5b98a5b555b/Untitled.png)
+![모델](https://user-images.githubusercontent.com/94789091/162891275-1bf9ef43-181a-4100-9ad3-df272847f1f9.png)
+![구조](https://user-images.githubusercontent.com/94789091/162891283-ce7f5ee1-0c7a-4620-907f-39ece272fd07.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d531d94f-c4ae-4b81-befe-fb31ab47f288/Untitled.png)
 
 - 기본적인 모델 컨셉은 기준 시간으로 부터 과거 12시간의 데이터를 참조 하여 미래 6시간의 데이터를 예측함
 - 과거 12시간 데이터 - 미래 6시간 데이터 그리고 lamp데이터를 모두 연결해주는 key 로 timestamp를 사용 함
