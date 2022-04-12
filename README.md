@@ -91,8 +91,7 @@
 
 ### 2.2 기상 데이터
 
-![구조](https://user-images.githubusercontent.com/94789091/162891419-87a47fc8-e075-481e-81e5-2b7f842adb36.png)
-
+![기상](https://user-images.githubusercontent.com/94789091/162891487-ec2d3702-c257-4941-86ec-eb843bd6e2b2.png)
 
 - 기상 데이터에는 기록 시간, 예측 시간 그리고 온도, 풍향,풍속,등의 데이터 존재
 
