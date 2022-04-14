@@ -144,16 +144,16 @@
 **10개 공항** 
 
 - 10개 공항의 각 configuration 확률을 모두 각각 예측 해야 함
-- 10개 공항을 한번에 학습 하는 것은 수 많은 경우의 수를 유발하기 때문에 정확도가 낮다고 판단 10개 공항 각각 모델을 학습 시키는 것으로 진행 함
-- 모델 네트워크는 동일하게 가져가되 데이터만 바꾸어 10개 모델을 만듬
+- 10개 공항을 한번에 학습 하는 것은 수 많은 경우의 수를 유발하기 때문에 정확도가 낮다고 판단 10개 공항 각각 모델을 학습 시키는 것으로 진행
+- 모델 네트워크는 동일하게 가져가되 데이터만 바꾸어 10개 모델 제작
 
 ### 4.2. Optimizer
 
-- Optimizer로 Tensorflow Addons API의 **Rectifier Adam**를 사용 함
+- Optimizer로 Tensorflow Addons API의 **Rectifier Adam**를 사용
     - Total steps : 10000
     - warmup_proportion=0.1
     - min_lr=0.00001
-    - Adam, SGD, AdamW를 모두 실험을 해 보았지만 RAdam이 가장 좋은 성능을 보여 줌
+    - Adam, SGD, AdamW를 모두 실험을 해 보았지만 RAdam이 가장 좋은 성능 보임
 - Learning rate 조절을 위한 Scheduler로 **Exponential Decay**를 사용
     - Initial Learning rate : 0.001
     - Decay steps : 100000
@@ -168,4 +168,28 @@
 
 💡 Current Rank : 1등
 
-</aside>
+==========================================================================
+
+# PROJECT - 03 Classification_Prediction
+## 주제) 위스콘신 유방암 데이터를 이용한 악성 양성/종양 예측 분석
+
+## 1. 프로젝트 개요
+- **데이터 정보**
+    - Kaggle
+    - 제공기관 University of Wisconsin-Madison
+
+- **프로젝트 목적**
+    - 
+- **프로젝트 기대효과**
+    - 
+    - 
+    - 
+    - 
+### 2. 전처리
+    - 
+    - 
+    - 
+    - 
+
+
+
