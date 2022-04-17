@@ -58,7 +58,7 @@
 ## 1. 프로젝트 개요
 
 - **대회 정보**
-    - 미국의 데이터 Competition Plotform ‘DRIVENDATA’에서 진행 된 Competition
+    - 미국의 데이터 Competition Platform ‘DRIVENDATA’에서 진행 된 Competition
     - Funded by NASA
     
     [Run-way Functions: Predict Reconfigurations at US Airports (Open Arena)](https://www.drivendata.org/competitions/89/competition-nasa-airport-configuration/)
