@@ -122,8 +122,7 @@
 
 ## 4. 모델 설명
 
-![모델](https://user-images.githubusercontent.com/94789091/162891275-1bf9ef43-181a-4100-9ad3-df272847f1f9.png)
-![구조](https://user-images.githubusercontent.com/94789091/162891283-ce7f5ee1-0c7a-4620-907f-39ece272fd07.png)
+![image](https://user-images.githubusercontent.com/94789091/163754500-b651326b-6258-4df6-9cf2-4ba3f168b895.png)
 
 
 - 기본적인 모델 컨셉은 기준 시간으로 부터 과거 12시간의 데이터를 참조 하여 미래 6시간의 데이터를 예측함
@@ -187,8 +186,12 @@
     - 결측치, 이상치 존재하지 않음
     
 ### 2. 상관분석
-    - 가설 설정 : 악성의 여부는 세포의 Mean그룹과 Worst 그룹 사이 상관관계가 있을 것이다.
+- **가설 설정**
+    - 악성의 여부는 세포의 Mean그룹과 Worst 그룹 사이 상관관계가 있을 것이다.
     
+![image](https://user-images.githubusercontent.com/94789091/163755009-20327871-ade3-4c56-a30f-5a60122c578e.png)
+
+
 
 
 
