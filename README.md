@@ -160,9 +160,9 @@
     - Stair case : True
 
 ## 5. 결과
-![image](https://user-images.githubusercontent.com/94789091/162676712-1d394528-1763-4d5a-a779-3d81d327fbb0.png)
+![image](https://user-images.githubusercontent.com/94789091/164410998-5101baf4-94c1-4701-800c-9a5ec5bfe184.png)
 
-![image](https://user-images.githubusercontent.com/94789091/160774083-ed1285a2-1e19-4576-bd14-375b595acf91.png)
+![image](https://user-images.githubusercontent.com/94789091/164411232-3232a020-2a40-43f4-ad07-94ba778cc9ac.png)
 
 
 💡 Current Rank : 1등
