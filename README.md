@@ -165,7 +165,7 @@
 ![image](https://user-images.githubusercontent.com/94789091/164411232-3232a020-2a40-43f4-ad07-94ba778cc9ac.png)
 
 
-💡 Current Rank : 1등
+💡 Current Rank : 2등
 
 ==========================================================================
 
