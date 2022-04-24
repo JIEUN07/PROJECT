@@ -55,9 +55,6 @@
 # PROJECT - 02 Timeseries_Prediction
 ## 주제) Run-way Functions: Predict Reconfigurations at US Airports (Open Arena)
 
-![image](https://user-images.githubusercontent.com/94789091/164951673-dc27071a-8a8e-444c-947a-3d6abdaebfc3.png)
-
-
 ## 1. 프로젝트 개요
 
 - **대회 정보**
@@ -65,6 +62,9 @@
     - Funded by NASA
     
     [Run-way Functions: Predict Reconfigurations at US Airports (Open Arena)](https://www.drivendata.org/competitions/89/competition-nasa-airport-configuration/)
+    
+    ![image](https://user-images.githubusercontent.com/94789091/164951697-5f9cf0d3-cc2a-4588-952c-3767f8a1befe.png)
+
     
 - **프로젝트 목적**
     - 미국 10개 공항의 미래에 어떤 활주로가 활성화 될지 예측
