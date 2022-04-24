@@ -55,6 +55,9 @@
 # PROJECT - 02 Timeseries_Prediction
 ## 주제) Run-way Functions: Predict Reconfigurations at US Airports (Open Arena)
 
+![image](https://user-images.githubusercontent.com/94789091/164951673-dc27071a-8a8e-444c-947a-3d6abdaebfc3.png)
+
+
 ## 1. 프로젝트 개요
 
 - **대회 정보**
