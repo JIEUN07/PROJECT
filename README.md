@@ -194,7 +194,8 @@
     
 ![image](https://user-images.githubusercontent.com/94789091/163755009-20327871-ade3-4c56-a30f-5a60122c578e.png)
 
-### 3. 다중공선성 제외하는 변수 설정
+### 3. 다중공선성 제거
+- **VIF 비교**
 
 
 
