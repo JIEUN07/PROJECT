@@ -213,8 +213,10 @@
 - 학습시킨 모델 기반 인코더를 사용해 DB의 특징벡터 추출
  
 ### 3.4 원하는 사진의 특징벡터 추출
+![image](https://user-images.githubusercontent.com/94789091/173601857-41b2db7e-b4fe-4ccf-be42-6d5ca1646cda.png)
 
 ### 3.5 DB 특징벡터와 유사도 비교
+![image](https://user-images.githubusercontent.com/94789091/173601989-884b4037-c3ae-4266-ab05-7e6f255aa837.png)
 
 ## 4. 모델 결과
 - Top-1 ACC 0.90 이상
